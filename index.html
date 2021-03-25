@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedr | Home</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Modal -->
+    <div class="modal-bg">
+        <div class="modal-body">
+            <div class="modal-header">
+                <span id="post_title">New post</span>
+                <a href="#" class="modal-exit"></a>
+            </div>
+            <main class="modal-main">
+                <textarea name="post_content" id="post_content" class="modal-post" maxlength="250"></textarea>
+            </main>
+            <nav class="modal-post-toolbar">
+                <span class="modal-subtext">250</span>
+                <a href="#" class="modal-tool">
+                    <img src="./assets/image.png" alt="">
+                </a>
+                <span class="modal-divider"></span>
+                <button class="modal-accept">post</button>
+            </nav>
+        </div>
+    </div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <nav class="sidebox">
+            <a href="#" class="side-profile">
+                <img src="assets/prof.jpg" alt="profile_picture" class="pic">
+                <span class="dots"></span>
+            </a>
+            <a href="#" class="side-nav" id="bell">
+                <img src="./assets/bell.png" alt="bell">
+            </a>
+            <a href="#" class="side-nav" id="chat">
+                <img src="./assets/chat.png" alt="chat">
+            </a>
+            <a href="#" class="side-nav" id="settings">
+                <img src="./assets/settings.png" alt="cog">
+            </a>
+            <a href="#" class="side-exit"></a>
+        </nav>
+    </aside>
+    <!-- Main App -->
+    <main class="container">
+        <div class="container-nav">
+            <a href="#" class="nav-button">
+            </a>
+            <span class="title">
+                <img src="./assets/feedr-logo.png" alt="logo">
+            </span>
+            <a href="#" class="nav-button" id="menu">
+                <img src="./assets/menu.png" alt="menu">
+            </a>
+        </div>
+        <div class="container-body">
+            <q-card title="Post" date="newdate">The quick brown fox jumps over the lazy dog</q-card>
+        </div>
+        <button class="post" id="post">
+            <img src="./assets/pencil.png" alt="">
+        </button>
+    </main>
+    <script src="./scripts.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+@import url('./styles/modal.css');
+@import url('./styles/sidebar.css');
+
+:root {
+    --theme-color: rgb(0, 91, 209);
+    --bg-color: #d8d8d8;
+}
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    background: white;
+}
+button:focus {
+    outline: none;
+}
+button:active {
+    filter: brightness(0.8);
+}
+.dark {
+    filter: invert(1);
+}
+.flip {
+    transform: rotate(180deg);
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.post {
+    z-index: 100;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--theme-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post > img {
+    width: 22px;
+    height: 22px;
+}
+
+
+.container {
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: 60px 1fr;
+
+    transition: all 0.5s ease;
+}
+
+
+.container-nav {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    border-bottom: 1px solid var(--bg-color);
+}
+.title {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.title > img {
+    width: auto;
+    height: 30px;
+}
+.nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-button > img {
+    width: 23px;
+    height: 23px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.sidebar {
+    
+}
+
+
+.container-body {
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow: auto;
+    background-color: var(--bg-color);
+}
+.container-body > * {
+    width: 100%;
+    box-sizing: border-box;
+}

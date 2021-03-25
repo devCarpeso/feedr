@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedr | register</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+        @import url('./styles/animations.css');
+
+        body, html {
+            font-family: 'Quicksand', sans-serif;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            font-family: 'Quicksand', sans-serif;
+            background: white;
+        }
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .panels {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            width: 100%;
+            height: 500px;
+        }
+        .panel {
+            margin: 0 20px;
+            width: 100%;
+            height: 100%;
+
+            background: white;
+            border-radius: 10px;
+            display: grid;
+            grid-template-rows: 1fr 60px;
+        }
+        .panel-content {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            overflow: hidden;
+
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+        
+        .page {
+            scroll-snap-align: start;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+
+            flex: 0 0 auto;
+            transition: all 0.2s ease;
+        }
+        .page > .title {
+            font-size: 2rem;
+        }
+        .page > .text {
+            font-size: 0.8rem;
+        }
+        .page > img {
+            width: auto;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+        .page > .input {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #e4e4e4;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            text-align: center;
+        }
+        .input::placeholder {
+            text-align: center;
+        }
+        .input:focus {
+            outline: none;
+        }
+        .panel-footer {
+            border-top: 1px solid #e4e4e4;
+            padding: 10px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .panel-buttons {
+            border: none;
+            width: 70px;
+            height: 100%;
+            border-radius: 5px;
+            background: rgb(44, 44, 44);
+            color: white;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: bold;
+
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .disabled {
+            color: black;
+            background: rgb(156, 156, 156);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        .right {
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container color-change-4x ">
+        <div class="panels">
+            <div class="panel">
+                <div class="panel-content">
+                    <div class="page" id="page_1">
+                        <img src="./assets/feedr-logo.png" alt="feedr-logo">
+                        <span class="title">
+                            Let's get started.
+                        </span>
+                        <input type="text" class="input" placeholder="Tell us your username!" maxlength="32">
+                    </div>
+                    <div class="page" id="page_2">
+
+                    </div>
+                    <div class="page" id="page_3">
+
+                    </div>
+                    <div class="page" id="page_4">
+
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a class="panel-buttons disabled" id="prev">
+                        back
+                    </a>
+                    <a class="panel-buttons right" id="next">
+                        next
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const prev = document.getElementById('prev'),
+        next = document.getElementById('next');
+
+        prev.href = '#page_1';
+        next.href = '#page_2';
+
+        function move(forward) {
+            if(forward) {
+                
+            }
+        }
+
+        prev.addEventListener('click', event => {
+            move(true);
+        });
+        next.addEventListener('click', event => {
+            move(false);
+        });
+    </script>
+</body>
+</html>

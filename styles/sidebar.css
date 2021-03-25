@@ -1,0 +1,89 @@
+.show-box {
+    right: 10px !important;
+}
+.show-bar {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+.sidebar {
+    z-index: 125;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.1);
+    position: fixed;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.1s ease;
+}
+.sidebox {
+    top: 10px;
+    right: -65px;
+    position: fixed;
+    border-radius: 10px;
+    width: 60px;
+    height: auto;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 
+    0 12.5px 10px rgba(0, 0, 0, 0.06), 
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086), 
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+    display: grid;
+    grid-template-rows: 80px 60px 60px 60px 35px;
+    transition: all 0.4s ease;
+}
+.side-exit {
+    border-radius: 0 0 10px 10px;
+    background :white;
+    background-image: url('../assets/back.png');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.side-profile {
+    border-radius: 10px 10px 0 0;
+    background: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 1px solid #eeeeee;
+}
+.side-profile > .pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.side-profile > .dots {
+    margin-top: 5px;
+    height: 15px;
+    width: 50px;
+
+    background-image: url('../assets/ellipsis.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+.side-nav {
+    background: white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-bottom: 1px solid #eeeeee;
+}
+.side-nav > img {
+    width: 25px;
+    height: 25px;
+}
